@@ -2124,8 +2124,7 @@ for (nombre_torneo_mw in names(comparaciones_por_torneo)) {
       resultado_test_obj_mw <- tryCatch({
         wilcox.test(Valor ~ YEAR_factor, data = datos_filtrados_mw, 
                     exact = FALSE, 
-                    conf.int = FALSE,
-                    paired = FALSE)
+                    conf.int = FALSE)
       }, error = function(e) {
         return(list(error_message = as.character(e$message)))
       })
@@ -3089,6 +3088,7 @@ print(tabla3_gt)
     ##   </tfoot>
     ## </table>
     ## </div>
+
 
 ``` r
 # Calcular la probabilidad de ganar para el equipo que anota primero,
